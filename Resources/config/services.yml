@@ -1,0 +1,20 @@
+parameters:
+    jira_rest_api.endpoint.project.class: Bluetea\Jira\Endpoint\ProjectEndpoint
+    jira_rest_api.endpoint.user.class: Bluetea\Jira\Endpoint\UserEndpoint
+    jira_rest_api.endpoint.jql.class: Bluetea\Jira\Endpoint\JqlEndpoint
+
+services:
+    jira_rest_api.endpoint.project:
+        class: %jira_rest_api.endpoint.project.class%
+        tags:
+            - { name: jira_rest_api.endpoint }
+
+    jira_rest_api.endpoint.user:
+        class: %jira_rest_api.endpoint.user.class%
+        tags:
+            - { name: jira_rest_api.endpoint }
+
+    jira_rest_api.endpoint.jql:
+        class: %jira_rest_api.endpoint.jql.class%
+        tags:
+            - { name: jira_rest_api.endpoint }

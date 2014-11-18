@@ -1,0 +1,26 @@
+{
+    "name": "bluetea/jira-rest-api-bundle",
+    "description": "Atlassian JIRA REST API Symfony2 Bundle",
+    "keywords": ["atlassian","jira","api","symfony2"],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pim Widdershoven",
+            "email": "p.widdershoven@bluetea.nl",
+            "homepage": "http://www.bluetea.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle": "~2.3",
+        "bluetea/jira-rest-api": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Bluetea\\JiraRestApiBundle": ""
+        }
+    },
+    "target-dir": "Bluetea/JiraRestApiBundle"
+}
