@@ -42,6 +42,12 @@ class EndpointCompilerPass implements CompilerPassInterface
                 'Bluetea\Api\Client\CurlClient',
                 array($config['base_url'], new Reference('jira_rest_api.authentication'))
             );
+        } elseif ($config['api_client'] == 'guzzle') {
+            // Create an API client service
+            $apiClientDefinition = new Definition(
+                'Bluetea\Api\Client\GuzzleClient',
+                array($config['base_url'], new Reference('jira_rest_api.authentication'))
+            );
         } else {
             throw new \LogicException('Invalid api client');
         }

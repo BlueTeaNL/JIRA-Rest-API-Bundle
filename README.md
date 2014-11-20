@@ -22,7 +22,7 @@ Add the configuration to your config.yml
 
 ```
 bluetea_jira_rest_api:
-    api_client: curl # only curl is supported at the moment
+    api_client: curl # curl or guzzle
     base_url: https://atlassian.yourdomain.com/rest/api/2
     authentication:
         type: basic # or anonymous
