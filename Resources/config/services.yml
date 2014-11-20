@@ -1,20 +1,32 @@
 parameters:
-    jira_rest_api.endpoint.project.class: Bluetea\Jira\Endpoint\ProjectEndpoint
-    jira_rest_api.endpoint.user.class: Bluetea\Jira\Endpoint\UserEndpoint
-    jira_rest_api.endpoint.jql.class: Bluetea\Jira\Endpoint\JqlEndpoint
+    jira_rest_api.jira.endpoint.project.class: Bluetea\Jira\Endpoint\ProjectEndpoint
+    jira_rest_api.jira.endpoint.user.class: Bluetea\Jira\Endpoint\UserEndpoint
+    jira_rest_api.jira.endpoint.jql.class: Bluetea\Jira\Endpoint\JqlEndpoint
+    jira_rest_api.crowd.endpoint.authentication.class: Bluetea\Crowd\Endpoint\AuthenticationEndpoint
+    jira_rest_api.crowd.endpoint.user.class: Bluetea\Crowd\Endpoint\UserEndpoint
 
 services:
-    jira_rest_api.endpoint.project:
-        class: %jira_rest_api.endpoint.project.class%
+    jira_rest_api.jira.endpoint.project:
+        class: %jira_rest_api.jira.endpoint.project.class%
         tags:
-            - { name: jira_rest_api.endpoint }
+            - { name: jira_rest_api.jira_endpoint }
 
-    jira_rest_api.endpoint.user:
-        class: %jira_rest_api.endpoint.user.class%
+    jira_rest_api.jira.endpoint.user:
+        class: %jira_rest_api.jira.endpoint.user.class%
         tags:
-            - { name: jira_rest_api.endpoint }
+            - { name: jira_rest_api.jira_endpoint }
 
-    jira_rest_api.endpoint.jql:
-        class: %jira_rest_api.endpoint.jql.class%
+    jira_rest_api.jira.endpoint.jql:
+        class: %jira_rest_api.jira.endpoint.jql.class%
         tags:
-            - { name: jira_rest_api.endpoint }
+            - { name: jira_rest_api.jira_endpoint }
+
+    jira_rest_api.crowd.endpoint.authentication:
+        class: %jira_rest_api.crowd.endpoint.authentication.class%
+        tags:
+            - { name: jira_rest_api.crowd_endpoint }
+
+    jira_rest_api.crowd.endpoint.user:
+        class: %jira_rest_api.crowd.endpoint.user.class%
+        tags:
+            - { name: jira_rest_api.crowd_endpoint }
