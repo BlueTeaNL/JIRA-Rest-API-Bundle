@@ -49,7 +49,7 @@ class TestController extends Controller
 {
     public function testAction()
     {
-        $projectEndpoint = $this->get('jira_rest_api.endpoint.project');
+        $projectEndpoint = $this->get('jira_rest_api.jira.endpoint.project');
         // Get all projects
         return new JsonResponse($projectEndpoint->findAll());
     }
